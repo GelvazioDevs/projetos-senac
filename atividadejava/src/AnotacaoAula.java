@@ -1,4 +1,4 @@
-public class Teste {
+public class AnotacaoAula {
     // rodar programa com F5
     // Atalhos 
     // Criar método printipal
@@ -16,7 +16,10 @@ public class Teste {
         System.out.println("Meu nome é Gelvazio Camargo.");
 
         // Atalho para voltar 4 espaços ou 1 TAB
-        // SHIFT + TAB        
+        // SHIFT + TAB
+        
+        // QUEBRA DE LINHA
+        System.out.println("teste \n teste2");
     }
 }
 
