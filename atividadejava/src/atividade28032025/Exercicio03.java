@@ -11,4 +11,8 @@ public class Exercicio03 {
 
         System.out.println("O produto é: " + produto);
     }
+
+    public void calculaSalarioFuncionario(){
+
+    }
 }
