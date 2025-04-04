@@ -15,6 +15,7 @@ public class Exercicio01 {
         System.out.println("Informe o numero B");
         int b = entrada.nextInt();
 
+        
         System.out.println("Informe o numero C");
         int c = entrada.nextInt();
 
