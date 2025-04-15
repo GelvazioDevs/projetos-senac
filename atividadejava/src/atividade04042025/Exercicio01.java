@@ -9,6 +9,7 @@ public class Exercicio01 {
         // e imprima na tela se a soma de A + B é menor que C.
 
         Scanner entrada = new Scanner(System.in);
+
         System.out.println("Informe o numero A");
         int a = entrada.nextInt();
         
@@ -24,7 +25,6 @@ public class Exercicio01 {
         } else {
             System.out.println("A soma de A + B não é menor que C");
         }
-
         entrada.close();
     }
 }
