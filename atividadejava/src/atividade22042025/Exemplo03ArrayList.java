@@ -46,7 +46,6 @@ public class Exemplo03ArrayList {
         String aluno4 [] = {"Ellen", "44"};
         String aluno5 [] = {"Julia", "32"};
 
-
         // arraylist
         ArrayList<String[]> listaDeAlunos = new ArrayList<String[]>();
         listaDeAlunos.add (aluno1);
@@ -69,9 +68,5 @@ public class Exemplo03ArrayList {
         }
 
         System.out.println("Alunos maiores que 30 anos(forma 02):" + alunosMaior30);
-
-
-
-
     }
 }
