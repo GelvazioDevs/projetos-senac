@@ -28,11 +28,13 @@ public class Exemplo02Switch {
             System.out.println("mensagem 4");
         } else if(opcao == 5){
             System.out.println("mensagem 5");
+        } else {
+            System.out.println("opção invalida!");
         }
  
         // USANDO SWITCH
         switch (opcao) {
-            case MENSAGEM_UM:
+            case 1: //MENSAGEM_UM:
                 System.out.println("mensagem 1");
                 // PODE SER COLOCADO MAIS SWITCH AQUI DENTRO
                 System.out.println("Informe a opção 2 entre 6 e 10:");
@@ -62,7 +64,7 @@ public class Exemplo02Switch {
                 System.out.println("mensagem 5");
             break;
             default:
-            System.out.println("opção inválida!");
+                System.out.println("opção inválida!");
                 break;
         }
 
