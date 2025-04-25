@@ -6,7 +6,7 @@ public class Exercicio03 {
     public static void main(String[] args) {
         
         // ENTRADA DE DADOS
-        // vetor - MODELO
+        // vetor - Veiculo
         String nome[] = new String[5];
         nome[0] = "Corolla";
         nome[1] = "Fusca";
