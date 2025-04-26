@@ -1,2 +1,0 @@
-# sistemacompleto
-Sistema Completo - Senac

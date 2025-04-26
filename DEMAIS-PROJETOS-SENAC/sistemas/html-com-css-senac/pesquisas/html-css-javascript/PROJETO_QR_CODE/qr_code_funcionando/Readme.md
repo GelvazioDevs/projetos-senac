@@ -1,1 +1,0 @@
-# Para testar o app, abrir o arquivo index.html

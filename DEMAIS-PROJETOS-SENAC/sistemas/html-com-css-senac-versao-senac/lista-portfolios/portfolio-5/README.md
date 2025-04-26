@@ -1,2 +1,0 @@
-# informaticabasica
-informaticabasica
