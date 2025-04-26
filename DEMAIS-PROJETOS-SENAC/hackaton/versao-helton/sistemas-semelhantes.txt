@@ -1,0 +1,11 @@
+https://juridico.ai/
+
+IA Utilizada:
+https://www.techtudo.com.br/tudo-sobre/claudeai/
+claude.ai/plano pro a partir de 20 dolares por mes/ 120 reais ao mes.
+
+[Integracao com a API da Claude.AI
+https://docs.anthropic.com/en/docs/welcome
+Criacao da conta com a Antropic AI 
+https://console.anthropic.com/login?returnTo=%2F%3F
+

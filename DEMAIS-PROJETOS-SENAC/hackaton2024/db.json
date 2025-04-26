@@ -1,0 +1,14 @@
+{
+  "systems": [],
+  "users": [
+    {
+      "usucodigo": 1,
+      "usunome": "helton",
+      "usulogin": "helton",
+      "ususenha": "123456",
+      "usuativo": true,
+      "id": 1
+    }
+  ],
+  "profiles": []
+}

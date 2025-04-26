@@ -1,0 +1,13 @@
+Alteracao 01
+Adicionar uma forma de ler um arquivo json, que sera o arquivo
+com os produtos da nota fiscal
+
+Alteracao 02
+Adicionar um local pra informar a margem de lucro por ncmsh.
+
+Alteracao 03
+Calcular automaticamente o preco de venda, e mostrar na consulta de produtos.
+
+
+
+

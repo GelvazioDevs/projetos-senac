@@ -1,0 +1,22 @@
+Chamada de api com o claude.ai:
+https://docs.anthropic.com/en/docs/initial-setup
+
+site:https://console.anthropic.com/settings/keys
+
+
+api-key
+
+Utilizacao da TESS.ai - tem todas as IAs em um so local
+https://pareto.io/
+
+
+[Inteligencia Artificial "Olhama"
+https://www.ollama.com/
+
+Baixando a Lhama no computador gratis
+https://www.ollama.com/download
+site de como utilizar
+https://www.youtube.com/watch?v=-tR9-gLLE9w
+
+
+

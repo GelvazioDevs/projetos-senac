@@ -1,0 +1,16 @@
+{
+  "name": "hackaton",
+  "version": "1.0.0",
+  "description": "Criar uma lista detalhada de materiais para cada um dos 50 procedimentos em um curso de enfermagem exige considerar que as necessidades específicas podem variar dependendo do contexto clínico, protocolos hospitalares e individualidade do paciente. No entanto, posso oferecer uma visão geral dos materiais geralmente necessários para cada procedimento:",
+  "main": "index.js",
+  "scripts": {
+    "api": "json-server --watch db/db.json --port 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

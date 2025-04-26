@@ -1,0 +1,20 @@
+
+*Topico 01*
+hora de experimentar
+não ter medo de experimentação
+
+*Topico 02*
+Analisar se o problema foi definido 
+de forma correta.
+
+*Topico 03*
+Implementacao Sistema
+Apenas depois de o problema 
+ter sido testado e validado
+é que deverá ser feita a Implementacao
+
+
+
+
+
+
