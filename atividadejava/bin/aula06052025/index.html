@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes</title>
+</head>
+<body>
+    <!-- <button onclick="minhaFuncao()">Chamando funcao</button>
+    <button onclick="calculadora()">Calculadora</button>
+    <button onclick="calculadora2()">Calculadora 2</button> -->
+    
+    <!-- PASSA A OPERACAO POR PARAMETRO -->
+    <button onclick="calculadoraFinal('soma')">Calculadora Final - Somar</button>
+    <button onclick="calculadoraFinal('multiplicacao')">Calculadora Final - Multiplicar</button>
+    <button onclick="calculadoraFinal('teste')">Calculadora Final - Invalido</button>
+
+    <h1>CALCULADORA VERSAO 2</h1>
+    <button onclick="calculadoraVersao2('soma')">Calculadora Final - Somar</button>
+    <button onclick="calculadoraVersao2('multiplicacao')">Calculadora Final - Multiplicar</button>
+    <button onclick="calculadoraVersao2('teste')">Calculadora Final - Invalido</button>
+    <button onclick="calculadoraVersao2('FORMULA_CARLOS')">Calculadora Final - Invalido</button>
+
+    <h1>CHAMADA DE API</h1>
+
+    <ul>
+        <li>
+            <button onclick="chamarApi()">Chamando API de CEP</button>
+        </li>
+        <li>
+            <button onclick="chamarApi()">Chamando API de CEP</button>
+        </li>
+        <li>
+            <button onclick="chamarApi()">Chamando API de CEP</button>
+        </li>
+        <li>
+            <button onclick="chamarApi()">Chamando API de CEP</button>
+        </li>
+        <li>
+            <button onclick="chamarApi()">Chamando API de CEP</button>
+        </li>
+    </ul>
+</body>
+
+<script>
+    function minhaFuncao(){
+        console.log("Chamando minha funcao...");
+    }
+
+    function calculadora(){
+       // soma
+       const n1 = 15;
+       const n2 = 10;
+
+       const resultado = n1 + n2;
+
+       console.log("Resultado:" + resultado);
+    }
+
+    function calculadora2(){
+       // multiplicacao
+       const n1 = 15;
+       const n2 = 10;
+
+       const resultado = n1 * n2;
+
+       console.log("Resultado:" + resultado);
+    }
+
+    function calculadoraFinal(operacao){
+        const n1 = 15;
+        const n2 = 10;
+        let resultado = false;
+        if(operacao == 'soma'){
+            resultado = n1 + n2;
+        } else if(operacao == 'multiplicacao'){
+            resultado = n1 * n2;
+        } else {
+            console.log("Operação inválida!")
+        }
+
+        if(resultado){
+            console.log("Resultado da " + operacao + " -> " + resultado);
+        }
+    }
+
+    function somar(n1,n2){
+        return n1 + n2;
+    }
+
+    function multiplicar(n1,n2){
+        return n1 * n2;
+    }
+
+    function calculadoraVersao2(operacao){
+        const n1 = 15;
+        const n2 = 10;
+
+        let resultado = false;
+        if(operacao == 'soma'){
+            resultado = somar(n1,n2);
+        } else if(operacao == 'multiplicacao'){
+            resultado = multiplicar(n1,n2);
+        } else if(operacao == 'FORMULA_CARLOS') {
+            resultado = n1 + n2 / 45 * 47;
+        } else {
+            console.log("Operação inválida!")
+        }
+
+        if(resultado){
+            console.log("Resultado da " + operacao + " -> " + resultado);
+        }
+    }
+
+    function chamarApi(){
+        const cep = '89160328';
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(response => {
+                response.json()
+                    .then(data => showData(data))
+        })
+    }
+
+    function showData (result) {
+        // debugger;
+
+        for(const campo in result){
+            console.log(campo)
+        }
+    }
+
+</script>
+</html>
