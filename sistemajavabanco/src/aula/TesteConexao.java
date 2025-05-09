@@ -39,6 +39,26 @@ public class TesteConexao {
         return listaUsuarios;
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public ArrayList<Usuario> getAll1515151(String sql) {
         ArrayList dadosArrayList = new ArrayList();
 
