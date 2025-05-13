@@ -12,13 +12,13 @@ import viewconsulta.consultaUsuarios;
 /**
  * @author Gelvazio Camargo
  */
-public class CadastroUsuario_1 extends javax.swing.JFrame {
+public class CadastroUsuario extends javax.swing.JFrame {
     Usuario usuario = new Usuario();
     ControllerUsuario controller = new ControllerUsuario();
     consultaUsuarios consulta = new consultaUsuarios(this, true);
     boolean existeUsuario = false;
     
-    public CadastroUsuario_1() {
+    public CadastroUsuario() {
         initComponents();
         this.setLocationRelativeTo(null);
         edtCodigo.requestFocus();
@@ -328,7 +328,7 @@ public class CadastroUsuario_1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CadastroUsuario_1().setVisible(true);
+                new CadastroUsuario().setVisible(true);
             }
         });
     }

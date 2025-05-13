@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 /**
  * @author Gelvazio Camargo
  */
-public class Conexao {
+public class ConexaoProfessor {
     static Connection conexao;
 
     public static Connection getConexao() {
@@ -20,14 +20,13 @@ public class Conexao {
     }
 
     public static void criaConexaoBanco() throws IOException{
-        // LINHA 23 PROFESSOR
         String driver  = "org.postgresql.Driver";        
         String database= "neondb";
         String usuario = "neondb_owner";                
         String host    = "ep-bold-resonance-acilywty-pooler.sa-east-1.aws.neon.tech";
         String senha   = "npg_erCNfpA6L3Du";        
         String url     = "jdbc:postgresql://" + host + "/" + database;
-        
+
         try {
             Class.forName(driver);
             
@@ -36,11 +35,19 @@ public class Conexao {
             System.out.println("Conectou com o PostgreSQL!");
         } catch (ClassNotFoundException Driver) {
             String message = "Driver não localizado: " + Driver;
-            MensagemSlack.slack("ERRO AO EXECUTAR SQL", message, "netbeans");
+//            try {
+//                MensagemSlack.slack("ERRO AO EXECUTAR SQL", message);
+//            } catch (IOException ex) {
+//                Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, ex);
+//            }
             JOptionPane.showMessageDialog(null, message);
         } catch (SQLException Fonte) {
             String message = "Deu erro na conexão com a fonte de dados: " + Fonte;
-            MensagemSlack.slack("ERRO AO EXECUTAR SQL", message, "netbeans");
+                MensagemSlack.slack("ERRO AO EXECUTAR SQL", message, "netbeans");
+//            try {
+//            } catch (IOException ex) {
+//                Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, ex);
+//            }
             JOptionPane.showMessageDialog(null, "Deu erro na conexão com a fonte de dados: " + Fonte);
         }
     }
@@ -109,7 +116,8 @@ public class Conexao {
             System.out.println("Erro ao executar sql!");
             System.out.println(message);
             
-            MensagemSlack.slack("ERRO AO EXECUTAR SQL", "erro ao executar sql!" + sql, "netbeans");
+            MensagemSlack.slack("ERRO AO EXECUTAR SQL", 
+                    "erro ao executar sql!" + sql, "netbeans");
             
             JOptionPane.showMessageDialog(null, "ERRO AO EXECUTAR SQL151: \n" + erro.getMessage(), "ERRO AO EXECUTAR SQL", JOptionPane.ERROR_MESSAGE);                        
         }

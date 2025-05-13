@@ -1,5 +1,6 @@
 package aula;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -16,14 +17,14 @@ public class TesteConexao {
 
     // atalho vscode - psvm + tab
     // atalho sout + tab    
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("ola");
         ArrayList<Usuario> listaUsuarios = getAllUsuarios("select * from public.usuario");
     }
 
     // lista usuarios
-    public static ArrayList<Usuario> getAllUsuarios(String sql) {
-        // sql = "select * from usuario order by 1";
+    public static ArrayList<Usuario> getAllUsuarios(String sql) throws IOException {
+        sql = "select * from usuario1 order by 1";
 
         Usuario usuario = new Usuario();
         ArrayList<Usuario> listaUsuarios = Conexao.executaQuery(sql, usuario);
