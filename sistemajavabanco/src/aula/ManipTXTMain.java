@@ -19,19 +19,19 @@ public class ManipTXTMain {
     
 //    ManipTXT manip = new ManipTXT("Clientes.txt");
 //    ManipTXT manip = new ManipTXT(".env");
-    ManipTXT manip = new ManipTXT("src/aula/.env");
-    Vector<String> v = manip.ler();
+    private ManipTXT manip = new ManipTXT("src/aula/.env");
+    private Vector<String> v = manip.ler();
 
 //    String database  = "neondb";
 //    String host    = "ep-damp-waterfall-a5s23fvv.us-east-2.aws.neon.tech";
 //    String url     = "jdbc:postgresql://" + host + "/" + database;
 //    String usuario = "neondb_owner";
 //    String senha   = "I1rEsX7tUqCm";
-    String database = "";
-    String host = "";
-    String url     = "jdbc:postgresql://" + host + "/" + database;
-    String usuario = "";
-    String senha = "";
+    private String database = "";
+    private String host = "";
+    private String url     = "jdbc:postgresql://" + host + "/" + database;
+    private String usuario = "";
+    private String senha = "";
 
     public ManipTXTMain() {
         listarVariaveisAmbiente();
@@ -292,4 +292,46 @@ public class ManipTXTMain {
     public void setUrl_slack(String url_slack) {
         this.url_slack = url_slack;
     }
+
+    public String getDatabase() {
+        return database;
+    }
+
+    public void setDatabase(String database) {
+        this.database = database;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    
+    
 }

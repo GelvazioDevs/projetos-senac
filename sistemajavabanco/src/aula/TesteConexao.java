@@ -24,13 +24,21 @@ public class TesteConexao {
 
     // lista usuarios
     public static ArrayList<Usuario> getAllUsuarios(String sql) throws IOException {
-        sql = "select * from usuario1 order by 1";
+        sql = "select * from usuario order by 1";
 
         Usuario usuario = new Usuario();
         ArrayList<Usuario> listaUsuarios = Conexao.executaQuery(sql, usuario);
         for (Usuario auxUsuario : listaUsuarios) {
-            System.out.println("Codigo - geo:" + auxUsuario.getCodigo());
-            System.out.println("Nome - geo:" + auxUsuario.getNome());
+            System.out.println("Codigo:" + auxUsuario.getCodigo());
+            System.out.println("Nome:" + auxUsuario.getNome());
+            System.out.println("Login:" + auxUsuario.getLogin());
+            System.out.println("E-mail:" + auxUsuario.getEmail());
+                                
+            //para p´rocurar depois do PONTO, digitar CTRL + ESPAÇO 
+            // DUPLICAR LINHA=> CTRL + SHIFT + SETA PRA BAIXO
+            // ALT + SHIFT SETA PRA BAIXO, MOVE A LINHA
+            System.out.println("-----------------------------");
+            
 //                auxUsuario.getCodigo(),
 //                auxUsuario.getNome(),
 //                auxUsuario.getEmail(),

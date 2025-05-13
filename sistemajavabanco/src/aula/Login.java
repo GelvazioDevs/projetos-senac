@@ -1,10 +1,11 @@
 package aula;
 
-import principal.*;
-import controller.ControllerUsuario;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import model.Vendedor;
+
 
 /**
  *
@@ -17,7 +18,7 @@ public class Login extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
-    Vendedor vendedor = new Vendedor();
+    // Vendedor vendedor = new Vendedor();
     Principal principal = new Principal();
 
     /**
@@ -41,7 +42,12 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setText("gelvazio");
+        jTextField1.setText("nicole");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextField1KeyPressed(evt);
@@ -89,12 +95,16 @@ public class Login extends javax.swing.JFrame {
         String senha = new String(jPasswordField1.getPassword());
         
         ControllerUsuario controller = new ControllerUsuario();
-        if (controller.validaLoginSenha(login, senha)) {
-            principal.setVisible(true);
-            dispose();
-        } else {
-            JOptionPane.showMessageDialog(null, "Usuário/Senha não confere!");
-            jTextField1.requestFocus();
+        try {
+            if (controller.validaLoginSenha(login, senha)) {
+                principal.setVisible(true);
+                dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuário/Senha não confere!");
+                jTextField1.requestFocus();
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -106,17 +116,21 @@ public class Login extends javax.swing.JFrame {
 
     private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            vendedor.setUsuario(jTextField1.getText());
-            vendedor.setSenha(jPasswordField1.getText());
-            if (vendedor.verificaUsuario()) {
-                principal.setVisible(true);
-                dispose();
-            } else {
-                JOptionPane.showMessageDialog(null, "Usuário ou Senha Incorretos!!");
-                jTextField1.requestFocus();
-            }
+//            vendedor.setUsuario(jTextField1.getText());
+//            vendedor.setSenha(jPasswordField1.getText());
+//            if (vendedor.verificaUsuario()) {
+//                principal.setVisible(true);
+//                dispose();
+//            } else {
+//                JOptionPane.showMessageDialog(null, "Usuário ou Senha Incorretos!!");
+//                jTextField1.requestFocus();
+//            }
         }
     }//GEN-LAST:event_jPasswordField1KeyPressed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

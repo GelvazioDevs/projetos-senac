@@ -24,9 +24,16 @@ public class Conexao {
         String driver  = "org.postgresql.Driver";        
         String database= "neondb";
         String usuario = "neondb_owner";                
+        
         String host    = "ep-bold-resonance-acilywty-pooler.sa-east-1.aws.neon.tech";
         String senha   = "npg_erCNfpA6L3Du";        
+        
         String url     = "jdbc:postgresql://" + host + "/" + database;
+        
+        // CARREGA AS VARIAVEIS DE AMBIENTE
+        ManipTXTMain m = new ManipTXTMain();  
+        host = m.getHost();
+        senha = m.getSenha();
         
         try {
             Class.forName(driver);
@@ -111,7 +118,7 @@ public class Conexao {
             
             MensagemSlack.slack("ERRO AO EXECUTAR SQL", "erro ao executar sql!" + sql, "netbeans");
             
-            JOptionPane.showMessageDialog(null, "ERRO AO EXECUTAR SQL151: \n" + erro.getMessage(), "ERRO AO EXECUTAR SQL", JOptionPane.ERROR_MESSAGE);                        
+            JOptionPane.showMessageDialog(null, "ERRO AO EXECUTAR SQL: \n" + erro.getMessage(), "ERRO AO EXECUTAR SQL", JOptionPane.ERROR_MESSAGE);                        
         }
 
         return lista;

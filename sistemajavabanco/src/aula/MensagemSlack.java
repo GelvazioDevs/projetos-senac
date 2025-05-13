@@ -15,7 +15,6 @@ import java.net.URL;
 public class MensagemSlack {
 
     public static void slack(String assunto, String message, String channel) throws MalformedURLException, IOException {
-        
         assunto = "PROFESSOR-" + assunto;
         
         // CARREGA AS VARIAVEIS DE AMBIENTE
