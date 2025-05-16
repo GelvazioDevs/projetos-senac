@@ -24,16 +24,13 @@ public class Conexao {
         String driver  = "org.postgresql.Driver";        
         String database= "neondb";
         String usuario = "neondb_owner";                
-        
-        String host    = "ep-bold-resonance-acilywty-pooler.sa-east-1.aws.neon.tech";
-        String senha   = "npg_erCNfpA6L3Du";        
-        
-        String url     = "jdbc:postgresql://" + host + "/" + database;
-        
+               
         // CARREGA AS VARIAVEIS DE AMBIENTE
         ManipTXTMain m = new ManipTXTMain();  
-        host = m.getHost();
-        senha = m.getSenha();
+        String host = m.getHost();
+        String senha = m.getSenha();
+        
+        String url     = "jdbc:postgresql://" + host + "/" + database;
         
         try {
             Class.forName(driver);
